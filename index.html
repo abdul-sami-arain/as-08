@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<style>
+body{
+    text-align: center;
+    background-color: #141414;
+}    
+#digits{
+    
+    width: 320px;
+    height: 320px;
+    border: 3px dashed #CCCCCC;
+    border-radius: 50%;
+    margin-left: 39%;
+    
+}
+.btn-group{
+    margin-right: 20px;
+}
+#circulate{
+    content: '';
+    position: absolute;
+    top: 116px;
+    left:39.5%;
+    width: 310px;
+    height: 310px;
+    border: 3px solid transparent;
+    border-top: 3px solid red;
+    border-right: 3px solid red;
+    border-radius: 50%;
+    
+}
+
+@keyframes circle{
+    from {
+    transform: rotateZ(0deg)
+  }
+  to {
+    transform: rotateZ(360deg)
+  }
+}
+#laps li{
+    border-bottom: 1px solid #CCCCCC;
+    width: 70px;
+    text-align: center;
+    margin-left: 120px;
+    color: #CCCCCC;
+}
+
+
+#digits h1{
+    text-align: center;
+    display: inline-block;
+    width: 50px;
+    padding-top: 50px;
+    color: #CCCCCC;  
+}
+@media (max-width: 375px){
+    #digits{
+    margin-left: 7%;
+}
+#circulate{
+    position: absolute;
+    top: 115px;
+    left: 8.5%; 
+}
+.headi{
+    padding-right: 20px !important;
+}
+.btn-group{
+    padding-right: 40px !important;
+}
+
+}
+
+@media (min-width: 414px) and (max-width: 450px){
+    #digits{
+    margin-left: 11%;
+}
+#circulate{
+    position: absolute;
+    top: 117px;
+    left: 12.5%; 
+}
+
+.btn-group{
+    padding-right: 50px !important;
+}
+
+}
+@media (min-width: 451px) and (max-width: 520px){
+    #digits{
+    margin-left: 18%;
+}
+#circulate{
+    position: absolute;
+    top: 117px;
+    left: 19%; 
+}
+}
+@media (min-width: 521px) and (max-width: 560px){
+    #digits{
+    margin-left: 19%;
+}
+#circulate{
+    left: 20%; 
+}
+}
+@media (min-width: 560px) and (max-width: 641px){
+    #digits{
+    margin-left: 24%;
+}
+#circulate{
+    left: 25%; 
+}
+}
+@media (min-width: 642px) and (max-width: 742px){
+    #digits{
+    margin-left: 27%;
+}
+#circulate{
+    left: 28%; 
+}
+.headi{
+    padding-right: 20px !important;
+}
+.btn-group{
+    padding-right: 40px !important;
+}
+}
+@media (min-width: 743px) and (max-width: 814px){
+    #digits{
+    margin-left: 30%;
+}
+#circulate{
+    left: 31%; 
+}
+.headi{
+    padding-right: 20px !important;
+}
+.btn-group{
+    padding-right: 40px !important;
+}
+}
+@media (min-width: 814px) and (max-width: 901px){
+    #digits{
+    margin-left: 32.5%;
+}
+#circulate{
+    left: 33%; 
+}
+.headi{
+    padding-right: 20px !important;
+}
+.btn-group{
+    padding-right: 40px !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+    
+
+    
+   
+    <div>
+       <h1 class="headi ml-4 pb-5 pt-2" style="color:#CCCCCC ;">STOP WATCH <img src="images/icon.png" alt="" width='25px'></h1>
+    </div>
+
+    <div class="bg"> 
+
+    <div  id="digits">
+        
+        <div id="circulate">
+             
+        </div>
+        <div>
+       <h1 id="min">00</h1>
+       <h1 id="sec">00</h1>
+       <h1 id="msec">00</h1>
+    </div>
+    <ul id="laps" class="list-unstyled"></ul>
+    </div>
+    <div class="bt ml-5 pt-5">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" id="str" onclick="start()" class="btn btn-secondary">Start</button>
+            <button type="button" id="stp" onclick="stop()" class="btn btn-secondary">Stop</button>
+            <button type="button" onclick="reset()" class="btn btn-secondary">Reset</button>
+            <button type="button" id="lap" onclick="lapping()" class="btn btn-secondary">Lap</button>
+          </div> 
+    </div>
+    
+</div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
